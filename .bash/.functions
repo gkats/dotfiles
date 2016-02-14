@@ -8,3 +8,8 @@ function sublgem () {
   /opt/sublime_text/sublime_text -n $(bundle show $1)
 }
 
+# Copy public key to clipboard
+function pubkey() {
+  more ~/.ssh/id_rsa.pub | xsel --clipboard --input
+  echo '=> Public key copied to clipboard.'
+}
