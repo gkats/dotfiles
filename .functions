@@ -1,0 +1,10 @@
+# Create a directory and cd into it
+function mkcd() {
+  command mkdir -p "$@" && cd "$@"
+}
+
+# Enable sublime to show gems source
+function sublgem () {
+  /opt/sublime_text/sublime_text -n $(bundle show $1)
+}
+
