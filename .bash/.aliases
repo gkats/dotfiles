@@ -1,0 +1,10 @@
+alias ll='ls -lGhop'
+
+alias tree='tree -Ch'
+
+alias subl='subl &'
+
+alias ll='ls -l'
+alias la='ls -A'
+alias l='ls -CF'
+
