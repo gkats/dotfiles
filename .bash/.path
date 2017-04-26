@@ -2,10 +2,8 @@
 PATH=$PATH:/home/gkats/hub-linux-amd64-2.2.3/bin/
 
 # Golang
-export GOROOT=$HOME/golang/go
-export PATH=$PATH:$GOROOT/bin
+export PATH=$PATH:/usr/local/go/bin
 
 # NVM
 export NVM_DIR="/home/gkats/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
-
