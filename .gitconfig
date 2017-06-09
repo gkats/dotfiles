@@ -11,6 +11,7 @@
   commentChar = ";"
 [alias]
   cm = commit
+  cma = commit --amend
   co = checkout
   lc = log ORIG_HEAD.. --stat --no-merges
   st = status -sb
