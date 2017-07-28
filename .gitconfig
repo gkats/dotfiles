@@ -18,3 +18,4 @@
   lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
   cleanup = !git remote prune origin && git gc && git clean -dfxn && git stash clear
   log1 = log --oneline
+  mergef = merge --no-edit
