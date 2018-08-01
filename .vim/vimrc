@@ -1,0 +1,68 @@
+" Use vim defaults instead of vi compatibility
+set nocompatible
+
+set background=dark
+set number
+set ruler
+set nowrap
+set cursorline
+set visualbell
+set title
+set colorcolumn=120
+
+" Reload files changed outside vim
+set autoread
+
+" Always save on file
+set backupcopy=yes
+
+set history=10000
+" Show incomplete commands
+set showcmd
+
+set incsearch
+" Make search case insensitive
+set ignorecase
+" unless there's a capital letter
+set smartcase
+
+set clipboard=unnamedplus
+
+syntax on
+
+set tabstop=2 shiftwidth=2 expandtab
+set autoindent
+
+" save swaps in fixed directories
+set directory=~/.vim/tmp/swap//,/var/tmp//,/tmp//
+
+" Trim trailing whitespace on save
+autocmd BufWritePre * %s/\s\+$//e
+
+colorscheme OceanicNext
+
+let g:netrw_liststyle = 3
+let g:netrw_banner = 0
+let g:netrw_winsize = 25
+let g:netrw_browse_split = 2
+
+set wildmenu
+set wildmode=longest:full,full
+set wildignore+=*.bmp,*.gif,*.ico,*.jpg,*.png,*.ico
+set wildignore+=*.pdf,*.psd
+set wildignore+=*.log
+set wildignore+=**/node_modules/**,**/.git/**
+
+" Remove gvim toolbar
+set guioptions-=T
+" Remove gvim menubar
+" set guioptions-=m
+
+set guifont=DejaVu\ Sans\ Mono\ 13
+
+
+" Enable project specific vimlocal
+set exrc
+
+" Prevent unsafe commands - Must be at the bottom
+set secure
