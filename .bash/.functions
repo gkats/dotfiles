@@ -13,3 +13,8 @@ function pubkey() {
   more ~/.ssh/id_rsa.pub | xsel --clipboard --input
   echo '=> Public key copied to clipboard.'
 }
+
+# Replace word in git repo
+function gitH() {
+  sed -i "s/$1/$2/g" $(git ls-files)
+}
