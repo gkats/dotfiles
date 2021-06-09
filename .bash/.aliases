@@ -5,6 +5,7 @@ alias tree='tree -Ch'
 alias subl='subl &'
 
 alias ll='ls -l'
-alias la='ls -A'
+alias lsa='ls -A'
 alias l='ls -CF'
 
+alias viv='gvim -v'
