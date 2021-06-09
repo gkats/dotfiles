@@ -39,6 +39,9 @@ set directory=~/.vim/tmp/swap//,/var/tmp//,/tmp//
 " Trim trailing whitespace on save
 autocmd BufWritePre * %s/\s\+$//e
 
+if (has("termguicolors"))
+  set termguicolors
+endif
 colorscheme OceanicNext
 
 let g:netrw_liststyle = 3
@@ -51,18 +54,41 @@ set wildmode=longest:full,full
 set wildignore+=*.bmp,*.gif,*.ico,*.jpg,*.png,*.ico
 set wildignore+=*.pdf,*.psd
 set wildignore+=*.log
-set wildignore+=**/node_modules/**,**/.git/**
+set wildignore+=**/node_modules/**,**/.git/**,**/tmp/cache/**
 
 " Remove gvim toolbar
 set guioptions-=T
 " Remove gvim menubar
-" set guioptions-=m
+set guioptions-=m
 
 set guifont=DejaVu\ Sans\ Mono\ 13
 
+" Golang
+let g:go_fmt_command = "goimports"
+" let g:go_auto_type_info = 1
+
+" Enable rufo (RUby FOrmat)
+let g:rufo_auto_formatting = 1
+
+" Prettier
+let g:ale_fixers = {
+\   'javascript': ['prettier'],
+\   'css': ['prettier'],
+\   'scss': ['prettier'],
+\   'md': ['prettier']
+\}
+let g:ale_fix_on_save = 1
+
+" More natural split opening
+set splitbelow
+set splitright
 
 " Enable project specific vimlocal
 set exrc
+
+let mapleader=","
+nnoremap <Leader>e :e **/*
+nnoremap <Leader>v :vsplit **/*
 
 " Prevent unsafe commands - Must be at the bottom
 set secure
