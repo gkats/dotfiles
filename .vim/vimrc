@@ -54,7 +54,7 @@ set wildmode=longest:full,full
 set wildignore+=*.bmp,*.gif,*.ico,*.jpg,*.png,*.ico
 set wildignore+=*.pdf,*.psd
 set wildignore+=*.log
-set wildignore+=**/node_modules/**,**/.git/**,**/tmp/cache/**
+set wildignore+=**/node_modules/**,**/.git/**,**/tmp/cache/**,node_modules/**
 
 " Remove gvim toolbar
 set guioptions-=T
@@ -70,9 +70,15 @@ let g:go_fmt_command = "goimports"
 " Enable rufo (RUby FOrmat)
 let g:rufo_auto_formatting = 1
 
+" vim-jsx-typescript
+" set filetypes as typescriptreact
+autocmd BufNewFile,BufRead *.tsx,*.jsx set filetype=typescriptreact
+
 " Prettier
 let g:ale_fixers = {
 \   'javascript': ['prettier'],
+\   'typescript': ['prettier'],
+\   'typescriptreact': ['prettier'],
 \   'css': ['prettier'],
 \   'scss': ['prettier'],
 \   'md': ['prettier']
