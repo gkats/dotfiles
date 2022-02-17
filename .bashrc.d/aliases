@@ -1,10 +1,8 @@
-alias ll='ls -lGhop'
-
 alias tree='tree -Ch'
 
 alias subl='subl &'
 
-alias ll='ls -l'
+alias ll='ls -lGhop'
 alias lsa='ls -A'
 alias l='ls -CF'
 
