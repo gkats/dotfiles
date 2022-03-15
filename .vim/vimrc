@@ -55,6 +55,7 @@ set wildignore+=*.bmp,*.gif,*.ico,*.jpg,*.png,*.ico
 set wildignore+=*.pdf,*.psd
 set wildignore+=*.log
 set wildignore+=**/node_modules/**,**/.git/**,**/tmp/cache/**,node_modules/**
+set wildignore+=*.d.ts,*.d.ts.map,*.test.tsx.snap
 
 " Remove gvim toolbar
 set guioptions-=T
