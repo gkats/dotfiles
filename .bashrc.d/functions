@@ -19,6 +19,12 @@ function gitH() {
   sed -i "s/$1/$2/g" $(git ls-files)
 }
 
+# Start a systemctl service
 function sysup() {
   command sudo systemctl start "$1"
+}
+
+# Stop a systemctl service
+function sysdown() {
+  command sudo systemctl stop "$1"
 }
