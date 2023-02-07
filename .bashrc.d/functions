@@ -28,3 +28,8 @@ function sysup() {
 function sysdown() {
   command sudo systemctl stop "$1"
 }
+
+# Find your public IP address
+function whatismyip() {
+  dig +short txt ch whoami.cloudflare @1.0.0.1 | sed s/\"//g
+}
